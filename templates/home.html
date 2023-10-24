@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock title %}
+{% block content %}
+<h1>{{user.first_name}}'s' Flask App example</h1>
+<h2>{{ self.title() }}</h2>
+<br>
+<div class="container">
+  <div class="d-grid gap-2">
+    <label class="btn btn-lg btn-outline-primary" for="powder">My Resume</label>
+    <input type="radio" class="btn-check" name="btnradio" id="powder" autocomplete="off" onclick="window.location.href = '/resume/home'">
+  </div>
+  <div class="d-grid gap-2">
+    <label class="btn btn-lg btn-outline-primary" for="builds">My Projects</label>
+    <input type="radio" class="btn-check" name="btnradio" id="builds" autocomplete="off" onclick="window.location.href = '/prjects/home'">
+  </div>
+</div>
+{% endblock content %}

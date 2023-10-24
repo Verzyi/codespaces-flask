@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="shortcut icon" href="{{ url_for('static', filename='images/cai-favicon.ico') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.png') }}">
 <head>
   {% block head %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -20,26 +20,24 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <img width="44" height="44" src="{{ url_for('static', filename='images/cai-icon.png') }}" class="custom-logo" alt="MyLogo" decoding="async">
+        <img width="44" height="44" src="{{ url_for('static', filename='images/logo.png') }}" class="custom-logo" alt="MyLogo" decoding="async">
         <div class="navbar-nav">
-          {% if user.is_authenticated %}
+          {% if user.is_authenticated !=True %}
           <a class="nav-item nav-link" id="home" href="/">Home</a>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-               aria-expanded="false">Apps</a>
-            <div class="dropdown-menu">
-              <a class="nav-item nav-link" id="powder_link" href="/powder/home">Powder Management</a>
-              <a class="nav-item nav-link" id="builds_link" href="/builds/">Build Tracking</a>
-              <a class="nav-item nav-link" id="quote_link" href="/quote">Quote Estimation</a>
-            </div>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                aria-expanded="false">Dashboards</a>
             <div class="dropdown-menu">
               <a class="nav-item nav-link" id="printers_link" href="/dashboards/printers">Printer Status</a>
-              <!-- <a class="nav-item nav-link" id="properties_link" 
-              href="/dashboards/material-properties">Material Properties</a> -->
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+               aria-expanded="false">Projects</a>
+            <div class="dropdown-menu">
+              <a class="nav-item nav-link" id="powder_link" href="/powder/home">Powder Management</a>
+              <a class="nav-item nav-link" id="builds_link" href="/builds/">Build Tracking</a>
+              <a class="nav-item nav-link" id="quote_link" href="/quote">Quote Estimation</a>
             </div>
           </li>
           <li class="nav-item dropdown">
