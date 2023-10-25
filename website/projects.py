@@ -9,4 +9,4 @@ def home():
     user = {'first_name': 'Chris',
             'last_name': 'Becker'}
     
-    return render_template("home.html", title="Chris Becker", user=user)
+    return render_template("projects/index.html", title="Chris Becker", user=user)

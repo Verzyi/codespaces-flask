@@ -5,9 +5,9 @@ from flask import Blueprint,render_template
 contact = Blueprint('contact', __name__)
 
 
-@contact.route("/")
+@contact.route("/contact-info")
 def home():
     user = {'first_name': 'Chris',
             'last_name': 'Becker'}
     
-    return render_template("home.html", title="Chris Becker", user=user)
+    return render_template("contact/contact-info.html", title="Chris Becker", user=user)
