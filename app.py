@@ -1,14 +1,6 @@
-from flask import Flask, render_template
+from website import CreateApp
 
+app = CreateApp()
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    user = {'first_name': 'Chris',
-            'last_name': 'Becker'}
-    
-    return render_template("home.html", title="Chris Becker", user=user)
-
-
-
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=6000, debug=True, threaded=True)
