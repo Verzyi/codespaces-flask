@@ -1,5 +1,4 @@
-
-from flask import Blueprint, flash,render_template,request
+from flask import Blueprint,render_template
 
 # Create a Blueprint for your views
 views = Blueprint('views', __name__)
