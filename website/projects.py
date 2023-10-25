@@ -5,7 +5,7 @@ from flask import Blueprint, flash,render_template,request
 projects = Blueprint('projects', __name__)
 
 
-@projects.route("/")
+@projects.route("/projects")
 def home():
     user = {'first_name': 'Chris',
             'last_name': 'Becker'}
